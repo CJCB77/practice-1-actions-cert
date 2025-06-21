@@ -1,0 +1,13 @@
+name: Detail
+on:
+  issues:
+    types: [opened]
+
+jobs:
+    info:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Details info
+              run: echo "The following event has triggered this action:${{github.event}}"
+            - name: Notify about issue
+              run: echo "An issue has been opened!"
