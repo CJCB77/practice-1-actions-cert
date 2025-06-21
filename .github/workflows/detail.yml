@@ -8,6 +8,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Details info
-              run: echo "The following event has triggered this action:${{github.event_name}}"
+              run: echo "The following event has triggered this action:${{toJson(github.event)}}"
             - name: Notify about issue
               run: echo "An issue has been opened!"
